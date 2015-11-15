@@ -100,6 +100,7 @@ if PY2:
 else:
     gettext.install(domain, localedir=locale_dir, names=('ngettext',))
 
+
 # http://stackoverflow.com/questions/10094335/how-to-bind-a-text-domain-to-a-local-folder-for-gettext-under-gtk3
 if sys.platform == "win32":
     from ctypes import cdll
@@ -115,7 +116,7 @@ else:
          # bindtextdomain(), which causes Gtk.Builder translations to fail.
          print("Couldn't bind the translation domain. Some translations won't work.")
          print(e)
-
+         
 ###############################################################################
 # Parse command line arguments
 
